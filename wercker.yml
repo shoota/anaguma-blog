@@ -1,0 +1,13 @@
+box: wercker/nodejs
+build:
+  steps:
+    - npm-install
+    - script:
+        name: wintersmith build
+        code: ./node_modules/.bin/wintersmith build -v -o ./build
+deploy:
+  steps:
+    - lukevivier/gh-pages:
+        token: $GIT_TOKEN
+        domain: blog.anaguma.org
+        basedir: build
