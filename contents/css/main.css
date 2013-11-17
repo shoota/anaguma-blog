@@ -12,7 +12,7 @@ body {
 }
 
 .content-wrap {
-  width: 34em;
+  width: 38em;
   margin: 0 auto;
 }
 
@@ -118,7 +118,7 @@ hr {
 
 body.article-detail > header h1 {
   font-size: 2.5em;
-  font-style: italic;
+  /**font-style: italic;**/
   font-weight: 400;
   margin-bottom: -0.2em;
 }
