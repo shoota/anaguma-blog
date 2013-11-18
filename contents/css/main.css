@@ -17,6 +17,14 @@ body {
     margin: 0 auto;
 }
 
+.logo{
+    background-image: url(../img/fabric_of_squares_gray.png);
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.1);
+    -moz-box-shadow: rgba(0,0,0,0.1) -1px 1px 2px inset, rgba(255,255,255,1) -1px 1px 0;
+    box-shadow: rgba(0,0,0,0.1) -1px 1px 2px inset, rgba(255,255,255,1) -1px 1px 0;
+}
+
 .content-wrap {
     width: 45em;
     margin: 0 auto;
@@ -99,6 +107,7 @@ hr {
 
 .header {
     margin: 3em 0 5em;
+    text-shadow: -1px 1px 0 rgba(50,50,50,0.4);
 }
 
 .header h1 {
@@ -128,6 +137,7 @@ hr {
     font-style: italic;
     text-align: center;
     margin-top: -0.3em;
+    margin-bottom: 0;
 }
 
 body.article-detail > header h1 {

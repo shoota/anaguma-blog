@@ -1,14 +1,16 @@
 ---
-title: iPhoneで撮った写真をDropbox on CentOSで同期管理する §2 Dropboxのファイル名を置換しながらコピーする
+title: iPhone写真をDropbox/CentOSで同期管理する §2
 author: shoota
 date: 2013-09-04 17:57
 template: article.jade
 ---
 
-[前回](/articles/2013-09-03) に引き続き、iPhone→Dropbox→サーバ→欲しい写真だけを集めたディレクトリ へと半自動的に同期管理させる方法を考える。前回はDropbox CLIとImageMagickのインストールを行い、サーバ上に全画像を同期させ、ピクセル数から判定したファイルを抽出（echoで確認）した。
+iPhoneで撮った写真をDropbox on CentOSで同期管理する §2 Dropboxのファイル名を置換しながらコピーする
+
+## [前回](/articles/2013-09-03) に引き続き、iPhone→Dropbox→サーバ→欲しい写真だけを集めたディレクトリ へと半自動的に同期管理させる方法を考える。前回はDropbox CLIとImageMagickのインストールを行い、サーバ上に全画像を同期させ、ピクセル数から判定したファイルを抽出（echoで確認）した。
 今回はDropboxから取得したファイルを管理用ディレクトリにコピーする方法を考える。ということでLet’s Try Hack.
 
-## ところでこれを見てくれ。こいつをどう思う[？](http://ja.wikipedia.org/wiki/%E3%81%8F%E3%81%9D%E3%81%BF%E3%81%9D%E3%83%86%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF "？")
+ところでこれを見てくれ。こいつをどう思う[？](http://ja.wikipedia.org/wiki/%E3%81%8F%E3%81%9D%E3%81%BF%E3%81%9D%E3%83%86%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF "？")
 
 ```bash
 % ls ~/Dropbox/カメラアップロード
