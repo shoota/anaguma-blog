@@ -8,7 +8,7 @@ template: article.jade
 Rubyをいじったことがないので環境周りからよくわからないけど、Github Pagesにブログを構築してみるテスト。
 LolipopさんのWordpressがものすごい苛められた記念。	
 
-## いま、僕の手元にはWindows PCしかないので、Rubyが動く環境も当然ない。かといってCygwinをインストールするのも面倒なので、CentOSのサーバ上でやってみた。
+<span class="more"></span>
 
 ### Rubyまわりを整備する
 
