@@ -20,14 +20,14 @@ app.get('/hoge', function(req, res){
 
 ## ejs
 ```html
-&lt;!-- HTML escapeされてしまってだめだった --&gt;
- &lt;%= JSON.stringify(data) %&gt;
+<!-- HTML escapeされてしまってだめだった -->
+ <%= JSON.stringify(data) %>
 
-&lt;!-- %=じゃなくて%-を使うといい --&gt;
- &lt;%- JSON.stringify(data) %&gt;
+<!-- %=じゃなくて%-を使うといい -->
+ <%- JSON.stringify(data) %>
 ```
 
 EJSに渡しているjsonはJSONオブジェクトなので、EJS側で `stringify` して文字列にする。（別にRouter側でやってもいいが）
-<%=だと中の文字列に対してオートでHTMLエスケープされちゃうので、&quoat;がいっぱいでてくる。 <%-で書いてあげればOK。</span>
+`<%= str %>` だと中の文字列に対してオートでHTMLエスケープされちゃうので、`&quoat;`がいっぱいでてくる。 `<%- str %>` で書いてあげればOK。</span>
 
 ---
