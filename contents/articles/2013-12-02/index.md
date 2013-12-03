@@ -20,7 +20,7 @@ Node.jsでGithub PagesにMarkdownで書くブログを構築したい。そん�
 その後、`wintersmith new <name>`でサンプル記事とともに一式が出来上がるので`wintersmith preview` でlocalhost:8080でプレビューできます。
 
 ```bash
-$ npm install -g
+$ npm install -g wintersmith
 $ wintersmith new anaguma-blog
 $ cd anaguma-blog
 $ wintersmith preview
@@ -82,7 +82,7 @@ wintersmithにブログ全体の設定をします。`/config.json` を開いて
 
 ```
 
-ブログコンテンツとして設定するのは基本的にlocalsのname、owner、descriptionです。nameはブログのトップなどに出てくるブログ名、ownerは著者、descripitonはブログ全体の説明です。
+ブログコンテンツとして設定するのは基本的にlocalsのname、owner、descriptionです。nameはブログのトップなどに出てくるブログ名、ownerは著者、descriptionはブログ全体の説明です。
 pluginsにはwintersmithのプラグインを設定でき、HTML出力の時に利用できます。
 [sassのプラグイン](https://github.com/jnordberg/wintersmith-node-sass)や[stylusのプラグイン](https://github.com/jnordberg/wintersmith-less)などがあるようです。
 paginator.coffeeはデフォルトで付随するプラグインで、ブログのページャを作成してくれます。
