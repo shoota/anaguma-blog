@@ -1,0 +1,116 @@
+<html>
+<head>
+	<title>jojo</title>
+	<meta charset="UTF-8" />
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript">
+	// namespace
+	window.app = {};
+	app.input=[];
+
+	  $(function(){
+	  	var start = $('#start')
+	  	start.on('click', function(){
+	  		$('.content').css({"background-color":"black","color":"white"});
+	  		var count=5;
+	  		var timer = setInterval(function(){
+	  			if(count===0){
+	  				clearInterval(timer);
+	  				//$('.content').css({"background-color":"white","color":"black"});
+	  				start.html('');
+	  				$("body").keypress( function( event ) {
+	  					// keycode map
+	  					if( event.which === 111 ){
+	  						app.input.push('o');
+	  					}else if(event.which === 114){
+	  						app.input.push('r');
+	  					}else if(event.which === 97){
+	  						if(app.input[1]==='r' && app.input[0]==='o'){
+	  							console.log('おら');
+	  						}
+	  						app.input=[];
+	  					}
+	  				});
+
+	  			} else {
+	  				start.html(count);	
+	  			}
+	  			count--;
+
+	  		}, 1000);
+
+	  		
+	  	});
+
+	  });
+	</script>
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Goblin+One' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+	  body, ul {
+	  	font-size: 1.0em;
+	  	margin: 0;
+	  }
+	  header{
+	  	background-color: #444444;
+	  	color: #f1f1f1;
+	  	margin: 0;
+	  }
+	  #head{
+	  	width: 80%;
+	  	margin-left:10%;
+	  	padding: 10px;
+	  	font-family: 'Lato', serif;
+	  }
+	  #title{
+	  	font-size: 3em;
+	  	text-align: center;
+	  }
+	  #rule{
+	  	background-color: #ffffff;
+	  	color: black;
+	  	padding: 14px;
+	  }
+	  .content{
+	  	width: 60%;
+	  	margin-left: 20%
+
+	  }
+	  #start{
+	  	width: 100%;
+	  	font-family: 'Goblin One', cursive;
+	  	font-size: 6em;
+	  	text-align: center;
+	  	margin-top: 10%;
+	  }
+	  .strong {
+	  	font-weight: bold;
+	  }
+	</style>
+
+</head>
+<body>
+
+<header>
+	<div id="head">
+		<div id="title">ORA-ORA Star platinum</div>
+		<div id="rule">
+			<span class="strong">ルール:</span>
+			<ul>
+				<li>The World　をクリック</li>
+				<li>時がうごきだしたら"ora"をできるだけ早くタイピング</li>
+				<li>10回<span class="strong">オラ</span>したら終了</li>
+			</ul>
+			
+		</div>
+	</div>
+	
+</header>
+
+<div class="content">
+	<div id="start">The World</div>
+</div>
+
+
+</body>
+</html>
