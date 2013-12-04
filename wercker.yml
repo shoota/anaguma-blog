@@ -4,7 +4,7 @@ build:
     - npm-install
     - script:
         name: wintersmith build
-        code: ./node_modules/.bin/wintersmith build -v -o --clean ./build
+        code: ./node_modules/.bin/wintersmith build --clean -v -o ./build
 deploy:
   steps:
     - lukevivier/gh-pages:
