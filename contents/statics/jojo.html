@@ -8,7 +8,6 @@
         window.app = {};
         app.input=[];
         app.counter = 0;
-
         $(function(){
             var $body  = $('body');
             var $start = $('#start');
@@ -32,21 +31,19 @@
                                 app.input.push('r');
                             }else if(event.which === 97){
                                 if(app.input[1]==='r' && app.input[0]==='o'){
-                                    $ora.append("オラ ");
                                     app.counter = app.counter+1;
+                                    $ora.append("オラ ");
                                     if(app.counter == 15){
-                                        $ora.empty().css({"font-size":"4em"}).append("オラァ!!");
+                                        $ora.empty().css({"font-size":"3.5em"}).append("オラァ");
                                         $body.off('keypress');
                                         app.end = new Date();
-
                                         setTimeout(function(){
                                             var time = app.end.getTime() - app.begin.getTime();
                                             console.log(time);
                                             $('#ora').fadeOut('slow', function(){
                                                 $('#end').append('TIME: ' + time.toString() + 'ミリ秒');
+                                                $('#tw').attr('data-text', 'グッド！なかなかおもしろいゲームだ。：' + time.toString() + 'ミリ秒');
                                             });
-
-
                                         }, 500);
                                     }
                                 }
@@ -58,11 +55,7 @@
                     }
                     count--;
                 };
-
-
                 timer = setInterval(game, 1000);
-
-
             });
 
         });
@@ -108,14 +101,13 @@
         #start, #end{
             width: 100%;
             text-align: center;
-            margin-top: 10%;
         }
         .strong {
             font-weight: bold;
         }
         #ora{
             font-family:"メイリオ", Meiryo,  "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-            font-size: 1.2em;
+            font-size: 1.0em;
             font-weight: bold;
             text-align: center;
         }
@@ -134,7 +126,7 @@
                 <li>時がうごきだしたら「ora」をできるだけ早くタイピング</li>
                 <li>15回「オラ」したら終了、タイムが表示される</li>
                 <li>タイピングする者が持つスタンドの能力の使用は許可する</li>
-                <li>やれやれ、Google Chromeしか動作確認してねーぜ！</li>
+                <li>やれやれ、Google Chromeしか動作確認してねーぜッ！</li>
             </ul>
 
         </div>
@@ -148,8 +140,9 @@
     <div id="end"></div>
 </div>
 <footer>
-    <a href="https://twitter.com/share" class="twitter-share-button" data-related="shoota" data-hashtags="jojohtml">Tweet</a>
+    <a id="tw" href="https://twitter.com/share" class="twitter-share-button" data-related="shoota" data-hashtags="adventar,jojohtml" data-text="">Tweet</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    
 </footer>
 <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
