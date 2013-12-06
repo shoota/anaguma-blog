@@ -41,7 +41,10 @@
                                             var time = app.end.getTime() - app.begin.getTime();
                                             console.log(time);
                                             $('#ora').fadeOut('slow', function(){
-                                                $('#end').append('TIME: ' + time.toString() + 'ミリ秒');
+                                                var score = 'TIME: ' + time.toString() + 'ミリ秒';
+                                                $('#end').append(score);
+                                                $('#tw').empty().html('<a href="https://twitter.com/share" class="twitter-share-button" data-related="shoota" data-hashtags="adventar,oraorash" data-text="'+'オラオラ'+score+'">Tweet</a>');
+                                                twttr.widgets.load();
                                             });
                                         }, 500);
                                     }
@@ -141,7 +144,9 @@
     <div id="end"></div>
 </div>
 <footer>
-    <a id="tw" href="https://twitter.com/share" class="twitter-share-button" data-related="shoota" data-hashtags="adventar,oraorash" data-text="">Tweet</a>
+    <span id="tw">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-related="shoota" data-hashtags="adventar,oraorash" data-text="">Tweet</a>
+    </span>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     <a href="https://twitter.com/shoota" class="twitter-follow-button" data-show-count="false">Follow @shoota</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
