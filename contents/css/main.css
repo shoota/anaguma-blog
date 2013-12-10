@@ -8,7 +8,7 @@ body {
     font-size: 21px;
     line-height: 1.52;
     background-color: #f8f8f8;
-    background-image: url("../img/ricepaper2.png");
+    background-image: url("../img/noisy_grid.png");
     text-rendering: optimizeLegibility;
 }
 
@@ -53,9 +53,9 @@ p {
 pre {
     font-size: 0.9em;
     overflow: auto;
-    background: #fff;
-    border: 1px dashed #d2d2d2;
-    border-radius: 0.25em;
+    background: rgba(172, 172, 172, 0.33);
+    border: 1px solid #54A5B9;
+    border-radius: 5px;
     margin-bottom: 1.8em;
     padding: 1em;
 }
@@ -211,7 +211,7 @@ footer .copy, footer .copy a {
 }
 
 .article header {
-    border-top: 1px dashed #d2d2d2;
+    border-top: 1px dotted #A7A7A7;
 }
 
 .article header h2 {
@@ -227,13 +227,14 @@ footer .copy, footer .copy a {
 }
 
 .article header .date {
-    text-align: center;
+    /*text-align: center;*/
     font-size: 0.8em;
     margin-top: -0.7em;
 }
 
 .article header .date span {
-    background-color: #f8f8f8;
+    background: #272727;
+    color: #ECECEC;
     padding: 0 0.7em;
 }
 
@@ -339,12 +340,13 @@ pre code {
 
 p code {
     padding: 0.1em 0.3em 0.2em;
-    border-radius: 0.3em;
+    border-radius: 2px;
     position: relative;
     top: -0.15em;
-    background: #444;
-    color: #fff;
+    background: #272727;
+    color: #7AFF00;
     white-space: nowrap;
+    margin-right: 2px;
 }
 
 /* syntax hl stuff */
