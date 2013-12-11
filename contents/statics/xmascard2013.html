@@ -13,7 +13,14 @@
         "fa-github","fa-twitter","fa-skype","fa-android","fa-apple","fa-pinterest","fa-facebook-square","fa-youtube","fa-foursquare","fa-dropbox",
         "fa-google-plus-square","fa-linkdin","fa-github-square","fa-instagram","fa-linux","fa-star","fa-heart","fa-tumblr-square","fa-vimeo-square","fa-github-alt"];
         $(function(){
-            $('#content').on('click', function( event ) {
+            var $content=$('#content');
+            $content.on('mouseover', function(){
+                $(this).css({"color":"#e3e3e3"});
+            });
+            $content.on('mouseout', function(){
+                $(this).css({"color":"#000"});
+            });
+            $content.on('click', function( event ) {
                 $('#header').fadeIn('slow');
                 $('#party').fadeOut('slow', function(){
                     $(this).empty();
@@ -94,6 +101,7 @@
         #content {
             padding-top: 1%;
             text-align: center;
+            cursor: pointer;
         }
 
         .thr {
