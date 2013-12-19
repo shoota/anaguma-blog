@@ -117,7 +117,7 @@ hr {
 }
 
 .header h1 {
-    font-size: 2.6em;
+    /*font-size: 2.6em;*/
     text-align: center;
     font-weight: 700;
     margin: 0;
@@ -151,8 +151,10 @@ hr {
 }
 
 body.article-detail > header h1 {
+    /**
     font-size: 2.5em;
-    /**font-style: italic;**/
+    font-style: italic;
+    **/
     font-weight: 400;
     margin-bottom: -0.2em;
 }
@@ -169,8 +171,7 @@ footer {
 
 footer .nav {
     text-align: center;
-    margin-top: 5em;
-    margin-bottom: 3.5em;
+    margin-bottom: 1.0em;
 }
 
 footer .nav a {
@@ -181,7 +182,7 @@ footer .nav a {
 
 footer .about {
     border-top: 1px dashed #d2d2d2;
-    padding: 2.2em 3em;
+    padding: 1.0em 0;
     font-size: 0.7em;
     -webkit-column-count: 3;
     -moz-column-count: 3;
@@ -207,7 +208,7 @@ footer .copy, footer .copy a {
 /* article */
 
 .article {
-    margin: 3em 0 4em;
+    margin: 3em 0 3em;
 }
 
 .article header {
@@ -215,11 +216,9 @@ footer .copy, footer .copy a {
 }
 
 .article header h2 {
-    font-style: italic;
-    text-align: center;
     font-weight: 400;
-    margin: 0.8em 0;
-    font-size: 1.4em;
+    margin: 0.4em 0;
+    font-size: 1.2em;
 }
 
 .article header h2 a {
@@ -227,7 +226,6 @@ footer .copy, footer .copy a {
 }
 
 .article header .date {
-    /*text-align: center;*/
     font-size: 0.8em;
     margin-top: -0.7em;
 }
@@ -237,6 +235,12 @@ footer .copy, footer .copy a {
     color: #ECECEC;
     padding: 0 0.7em;
 }
+
+.article.intro .content {
+    font-size: 0.8em;
+    margin-left: 10%;
+}
+
 
 .article.intro .content p {
     display: inline;
