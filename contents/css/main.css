@@ -192,6 +192,7 @@ footer .about {
     border-top: 1px dashed #d2d2d2;
     padding: 1.0em 0;
     font-size: 0.7em;
+/*
     -webkit-column-count: 3;
     -moz-column-count: 3;
     -ms-column-count: 3;
@@ -200,6 +201,7 @@ footer .about {
     -moz-column-gap: 2em;
     -ms-column-gap: 2em;
     column-gap: 2em;
+*/
 }
 
 footer .copy {
@@ -429,6 +431,12 @@ code.lang-markdown .bullet {
     font-size: 12px;
     width: 90%;
     margin: 0 auto;
+}
+
+#sns-widget {
+    margin-bottom: 20px;
+    padding-left: 40px;
+    text-align: center;
 }
 
 /* media queries */

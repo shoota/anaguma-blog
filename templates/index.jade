@@ -18,10 +18,8 @@ block content
 block prepend footer
   div.nav
     if prevPage
-      a(href=prevPage.url) <i class="fa fa-chevron-circle-left"></i> Newer
+      a(href=prevPage.url) <i class="fa fa-angle-double-left"></i> Newer
     else
-      a(href='/archive.html') <i class="fa fa-chevron-circle-left"></i> Archives
+      a(href='/archive.html') <i class="fa fa-angle-double-left"></i> Archives
     if nextPage
-      a(href=nextPage.url) Next <i class="fa fa-chevron-circle-right"></i>
-
-
+      a(href=nextPage.url) Next <i class="fa fa-angle-double-right"></i>
