@@ -7,7 +7,7 @@ block content
       header
         p.date
           span= moment.utc(article.date).format('DD. MMMM YYYY')
-        h2.article-title
+        h2.article-title.shake.shake-horizontal
           a(href=article.url)= article.title
       section.content
         !{ typogr(article.intro).typogrify() }
