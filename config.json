@@ -1,6 +1,6 @@
 {
   "locals": {
-    "url": "http://localhost:8080",
+    "url": "http://blog.anaguma.org",
     "name": "Anaguma blog",
     "owner": "shoota",
     "description": "return new Bug();"
