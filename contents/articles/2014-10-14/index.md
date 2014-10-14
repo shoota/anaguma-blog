@@ -80,7 +80,7 @@ public class RootController {
 `@Valid Human`annotationで`@NotNull`のチェックを実行させ、その結果を`BindeingResult`が保持（参照？）している。
 
 複数の制約で一つの入力チェックとしたい場合は独自でannotationを実装する。これについてはこの[エントリ](http://yamkazu.hatenablog.com/entry/20110206/1296985545)が
-非常にわかりやすくてためになった。ちなみに、validationのエラー時のメッセージはproperyファイルで管理されているので、メッセージの日本語化に関しても、上記のエントリがすごく役立った。ありがとうござます。
+非常にわかりやすくてためになった。ちなみに、validationのエラー時のメッセージはpropetyファイルで管理されているので、メッセージの日本語化に関しても、上記のエントリがすごく役立った。ありがとうござます。
 
 
 
