@@ -48,7 +48,7 @@ Github API v3 をびゃーっっと眺めていたらリストを取得できる
 ###　HTML全体はこんな感じ
 
 <script src="https://gist.github.com/shoota/7987115.js"></script>
-サンプルではテキスト高さを揃えるために`.ge {　vertical-align: middle;　}`してるけど、好みとか周りの見た目とか、一緒に使うフォントとかで違かわってきそう。
+サンプルではテキスト高さを揃えるために`.ge {　vertical-align: middle;　}`してるけど、好みとか周りの見た目とか、一緒に使うフォントとかで違ってきそう。
 
 
 ---
