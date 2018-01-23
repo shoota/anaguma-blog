@@ -1,16 +1,15 @@
 language: node_js
 sudo: false
 node_js: stable
+env:
+  global:
+    secure: LN0b5vzWwqPJRkO11smUE5vzYc4rivN767lYISq8drWzxx+fWcgA/c9oP2lnFSnt7zMCfjVTNbvaPM+cNAckEExqaRKfmUWfZkZOBAZc5ApO2nZp/Jj+AumMAGE2E2gr+7oOhlZP0HGCneV1XQoPgyh838+5BCMj0Z98qG8d8a4=
 script:
-- npm run clean
+- npm run deploy
 branches:
   only:
   - master
-install:
-- npm install -g hexo
-deploy:
-- provider: script
-  script: script/deploy
-  skip_cleanup: true
-  on:
-    tags: false
+before_script:
+- git config --global user.email "shoota.dev@gmail.com"
+- git config --global user.name "shoota"
+- sed -i "s/GH_TOKEN/${GH_TOKEN}/" _config.yml
