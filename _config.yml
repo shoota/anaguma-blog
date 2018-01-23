@@ -77,4 +77,7 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: git@github.com:shoota/anaguma-blog.git
+  branch: gh-pages
+  message: "deploy: {{ now('YYYY-MM-DD HH:mm:ss') }}"
