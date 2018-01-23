@@ -18,6 +18,7 @@
     "hexo-server": "^0.2.0"
   },
   "scripts": {
+  "start": "hexo server",
   "clean": "hexo clean",
   "deploy": "hexo deploy -g"
   }
