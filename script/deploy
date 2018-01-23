@@ -1,10 +1,13 @@
 #!/bin/bash
 
 echo "setup ssh config"
-openssl aes-256-cbc -K $encrypted_41bc19876c37_key -iv $encrypted_41bc19876c37_iv -in blog_travis_key.enc -out ~/.ssh/id_rsa -d
+openssl aes-256-cbc -K $encrypted_41bc19876c37_key -iv $encrypted_41bc19876c37_iv -in ../blog_travis_key.enc -out ~/.ssh/id_rsa -d
 chmod 600 ~/.ssh/id_rsa
 echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 echo "setup git config"
 git config --global user.email "shoota.dev@gmail.com"
 git config --global user.name "shoota"
+
+echo "run deploy"
+npm run deploy
