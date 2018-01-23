@@ -22,7 +22,11 @@ html(lang='ja')
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-45958410-1', 'anaguma.org');
+
+        ga('create', 'UA-45958410-1', 'auto');
+        ga('require', 'linker');
+        ga('linker:autoLink', ['github.io'], false, true);
+        console.log('use linker plugin');
         ga('send', 'pageview');
       body(class=bodyclass)
     header.header
