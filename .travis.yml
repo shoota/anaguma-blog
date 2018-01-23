@@ -6,6 +6,8 @@ script:
 branches:
   only:
   - master
+install:
+- npm install -g hexo
 deploy:
 - provider: script
   script: script/deploy
