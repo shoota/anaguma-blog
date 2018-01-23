@@ -1,6 +1,6 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
+  "name": "anaguma.blog",
+  "version": "1.0.0",
   "private": true,
   "hexo": {
     "version": "3.4.4"
@@ -16,5 +16,9 @@
     "hexo-renderer-marked": "^0.3.0",
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-server": "^0.2.0"
+  },
+  "scripts": {
+  "clean": "hexo clean",
+  "deploy": "hexo deploy -g"
   }
 }
