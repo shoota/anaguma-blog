@@ -2,6 +2,9 @@
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+			   id="twitter-btn" class="nav-icon" data-show-count="false"
+			   onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;"></a>
 		</span>
 		<span class="meta-elements author"><%= config.author %></span>
 		<div class="commentscount">
