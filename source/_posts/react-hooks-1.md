@@ -1,6 +1,6 @@
 ---
-title: React Hooks を雑にメモってまとめる
-date: 2019-03-07 01:20:29
+title: React Hooks を雑にメモってまとめる vol.1
+date: 2019-03-10 00:20:29
 tags: react
 ---
 
@@ -10,7 +10,7 @@ tags: react
 - Class Base ComponentからFunctional Componentへ
 - SFC(Stateless Functional Component) と関数の入れ子（compose）で振る舞いと見た目を決める
 - State管理とRenderingライフサイクルとしてReduxが関数ミルフィーユを支える
-- React本体が振る舞い自体を関数化しちゃえ！からの **React Hooks**爆誕
+- React本体が振る舞い自体を関数化しちゃえ！からの _React Hooks_ 爆誕
 
 ---
 
@@ -74,8 +74,9 @@ React.useEffect(
 
 `useContext(AnyContext)`
 
-プロダクト開発ではまあめったに使わないし、使えるほどの設計パワーが足りないので、まずは使っているmoduleのAPIリファレンスやコードを読むこと。
-
+プロダクト開発ではまあめったに使わないし、使えるほどの設計パワーが足りないのでほとんど使わなそう（読むことはきっとある）。
+`createContext` で生成したPropsを下位のコンポーネントが受け取る場合、従来はConsumerのrender props引数から受け取っていたが、
+`useContext` の返却値として受け取れるようになった。Contextからattributeを取り出すようなイメージ。
 
 
 ## useReducer
@@ -127,3 +128,8 @@ useMemoとほぼ同じだが、関数オブジェクトそのものをmemo化す
 関数オブジェクトをmemo化することによって、Propsに与えている関数が再生性されることを抑制するなどができそう。
 
  
+---
+
+
+
+> vol.1では一旦ここまで。次回、useRefなどの ~~あまりつかわなそう~~ 使用頻度の低い、Hooks APIにふれる。
